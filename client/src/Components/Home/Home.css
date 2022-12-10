@@ -1,0 +1,426 @@
+.carousel {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.carousel_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.carousel_card {
+    display: flex;
+    flex: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s ease-in-out;
+}  
+.carousel_card-active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: visible;
+} 
+.card_image {
+    width: 100%;
+    object-fit: cover;
+} 
+.card_overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:var(--white);
+}  
+.card_title {
+    font-size: 70px;
+    font-family: 'Amatic SC', cursive;
+    color:var(--main-color);
+    font-weight: lighter;
+}
+.card_para {
+    font-size: 65px;
+	font-family: 'Actor', sans-serif;
+    width: 11em;
+    text-align: center;
+    margin-bottom: 40px;
+} 
+.buttonHome {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+.buttonHome {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: var(--main-color);
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 35px;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+.hover-text {
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+.buttonHome:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+.carousel_arrow_left,
+  .carousel_arrow_right {
+    position: absolute;
+    font-size: 5rem;
+    color:var(--main-color);
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    padding-bottom: 15px;
+    cursor: pointer;
+}  
+.carousel_arrow_left {
+    left: 15px;
+}
+.carousel_arrow_right {
+    right: 15px;
+}  
+.carousel_pagination {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}  
+.pagination_dot {
+    height: 10px;
+    width: 10px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+} 
+.pagination_dot:hover {
+    transform: scale(1.2);
+}
+.pagination_dot-active {
+    background-color: var(--main-color);
+}
+
+/* Home About */
+#HomeAbout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+#HomeAbout .About-Gallery img {
+    width: 200px;
+    height: 300px;
+}
+#HomeAbout .About-Gallery {
+    width: 50%;
+}
+#HomeAbout .About-Gallery img:nth-child(2) {
+    position: absolute;
+    width: 300px;
+    height: 420px;
+    z-index: 1;
+}
+#HomeAbout .About-Gallery img:nth-child(1) {
+    position: relative;
+    bottom: -3em;
+    left: 3em;
+    z-index: 2;
+}
+#HomeAbout .About-Gallery img:nth-child(3) {
+    position: relative;
+    bottom: -12em;
+    right: -13em;
+    z-index: 2;
+}
+#HomeAbout .About-Body {
+    width: 50%;
+} 
+#HomeAbout .About-Body h1 {
+    color:var(--main-color);
+    font-family: 'Akaya Kanadaka', cursive;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+#HomeAbout .About-Body .desc .div{
+    display: flex;
+    margin-bottom: 20px;
+    font-family: 'Arimo', sans-serif;
+    align-items: center;
+}
+#HomeAbout .About-Body .desc .div h1 {
+    font-size: 50px;
+}
+#HomeAbout .About-Body .desc .div .desc-text {
+    margin-left: 20px;
+}
+#HomeAbout .About-Body .desc .div .desc-text h2 {
+    font-size: 25px;
+    color:#132B3D;
+}
+#HomeAbout .About-Body .desc .div .desc-text p {
+    margin-top: 10px;
+    color:#5B5B5B;
+    font-size: 17px;
+}
+
+/* Home Services */
+#HomeServices {
+    width: 100%;
+    background-color: var(--secondary-color);
+    color:var(--white);
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#HomeServices .Service-header {
+    text-align: center;
+    margin-bottom: 70px;
+    font-family: 'Arapey', serif;
+}
+#HomeServices h1 {
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+#HomeServices span {
+    color:var(--main-color);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+#HomeServices .grid-services {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    font-family: 'Arimo', sans-serif;
+}
+#HomeServices .grid-services .service {
+    display: flex;
+    flex-direction: column;
+    justify-content:first baseline;
+    align-items: center;
+    text-align: center;
+}
+#HomeServices .grid-services .service .service-img {
+    background-color: #383838;
+    padding: 20px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 20px;   
+}
+#HomeServices .grid-services .service .service-img img {
+    width: 60px;
+    height: 60px;
+}
+#HomeServices .grid-services .service h2 {
+    font-weight: 500;
+    color:var(--main-color);
+    margin-bottom: 20px;
+}
+#HomeServices .grid-services .service p {
+    opacity: 0.8;
+    width: 83%;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* HomeDelivery */
+#HomeDelivery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color:var(--white);
+}
+#HomeDelivery .delivery-body {
+    background-color: rgba(44, 45, 47,0.77);
+    padding: 40px;
+    border-radius: 40px;
+}
+#HomeDelivery .delivery-body span {
+    font-family: 'KG Drops of Jupiter', sans-serif;
+    color:var(--main-color);
+    font-size: 25px;
+}
+#HomeDelivery .delivery-body h1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 500;
+    font-size: 45px;
+    width: 80%;
+    margin-top: 5px;
+}
+#HomeDelivery .delivery-order {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    border: none;
+    text-align: center;
+    padding: 16px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 30px;
+}
+#HomeDelivery .delivery-order span {
+    font-size: 20px !important;
+    color:var(--white) !important;
+    font-family: 'Arimo', sans-serif !important;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}  
+#HomeDelivery .delivery-order span:after {
+    font-family: 'Arimo', sans-serif !important;
+    color:var(--white) !important;
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}  
+#HomeDelivery .delivery-order:hover span {
+    padding-right: 20px;
+}   
+#HomeDelivery .delivery-order:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+#HomeDelivery img {
+    position: relative;
+    width: 375px;
+    height: 318px;
+    left: -126px;
+}
+/* HomeAvailability */
+#HomeAvailability {
+    width: 100%;
+    background: linear-gradient(rgba(75, 75, 75,0.7),rgba(75, 75, 75,0.7)),url(../../../public/Images/edward-franklin-Nb_Q-M3Cdzg-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#HomeAvailability .check {
+    margin-left: 90px;
+}
+#HomeAvailability .check span {
+    font-size: 28px;
+    font-family: 'KG Drops of Jupiter', sans-serif;
+    color:var(--main-color);
+}
+#HomeAvailability .check h1 {
+    font-family: 'Arapey', serif;
+    color:var(--white);
+    font-size: 55px;
+    font-weight: lighter;
+    margin-bottom: 45px;
+}
+#HomeAvailability .check .check-buttons button:nth-child(1) {
+    border: none;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 17px;
+    color:var(--white);
+    font-weight: lighter;
+    padding: 15px 22px 15px 22px;
+    border-radius: 8px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+#HomeAvailability .check .check-buttons button:nth-child(2) {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 17px;
+    border: none;
+    background: transparent;
+    color:var(--white);
+    cursor: pointer;
+}
+#HomeAvailability .Availability {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#HomeAvailability .Availability .img-poly{
+    width: auto;
+    height: auto;
+    display: flex;
+}
+#HomeAvailability .Availability img{
+    display: flex;
+    width: 200px;
+}
+#HomeAvailability .Availability .rotate-img {
+    transform: rotate(180deg);
+}
+#HomeAvailability .Availability .day-time{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--white);
+    width: 380px;
+    top: 0;
+    text-align: center;
+}
+#HomeAvailability .Availability div .time h2{
+    font-family: 'Actor', sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+#HomeAvailability .Availability div .time p {   
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+#HomeAvailability .Availability div .time p span {
+    color:var(--main-color);
+}
+#HomeAvailability .Availability div .time:nth-child(1) {
+    margin-bottom: 40px;
+}

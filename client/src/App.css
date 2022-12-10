@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.cdnfonts.com/css/kasandra-script');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+
+:root {
+  --main-color: #D0A166;
+  --secondary-color: #2C2D2F;
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray: #848484;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

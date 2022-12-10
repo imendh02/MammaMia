@@ -1,0 +1,406 @@
+#reservation {
+    width: 100%;
+    min-height: 100vh;
+    height: 1250px;
+    background: linear-gradient(rgba(44, 45, 47,0.7),rgba(44, 45, 47,0.7)),url(../../../public/Images/Reservation.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arapey', serif;
+}
+#reservation .reservation-form {
+  display: flex;
+}
+#reservation .timing {
+  text-align: center;
+  background-color: rgba(44, 45, 47,.84);
+  padding: 25px;
+  color:var(--white);
+  font-family: 'Arimo', sans-serif;
+}
+#reservation .timing .open-time {
+  height: 91%;
+  border: dashed 2px var(--white);
+  padding: 30px;
+}
+#reservation .book {
+  width: 980px;
+  background-color:rgba(255, 255, 255,.84);
+  padding: 25px;
+}
+#reservation .book .reserv {
+  max-width: 100%;
+  border: dashed 2px var(--main-color);
+  padding: 30px;
+}
+#reservation .book h1 {
+  text-align: center;
+  font-size: 50px;
+  color:var(--main-color);
+  font-weight: lighter;
+}
+#reservation .book p {
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+#reservation .book .formGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 15px;
+}
+#reservation .book form input {
+  outline: none;
+  border:1px dashed var(--main-color); 
+  width: 270px;
+  height: 58px; 
+  font-size: 20px;
+  font-family: 'Arapey', serif;
+  padding-left: 20px; 
+  background: transparent;
+}
+#reservation .book form input:focus,#reservation .book form textarea:focus {
+  border:1px solid var(--main-color) !important;
+}
+.inputGroup .form__label {
+  color:var(--main-color);
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: 20px;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+.inputGroup .form__input {
+  display: block;
+  transition: all 0.3s;
+}
+.inputGroup .form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+#reservation .book form .dropdown {
+  width: 235px;
+  height: 58px;
+  position: relative;
+  font-size: 18px;
+}
+#reservation .book form .dropdown-selection ,.book form .dropdown-selection.visible{
+  border: dashed 1px var(--main-color);
+  color:var(--gray);
+  width: 235px;
+  height: 58px;
+  cursor:pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+#reservation .book form .dropdown-selection::after {
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--gray);
+  border-bottom: 2px solid var(--gray);
+  transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  top:23px;
+}
+#reservation .book form .dropdown-selection.visible::after {
+  top:30px;
+  transform: rotate(-135deg);
+}
+#reservation .book form .dropdown .items-holder {
+  position: absolute;
+  top:100%;
+  width: 235px;
+}
+#reservation .book form .dropdown .items-holder .dropdown-item {
+  background-color: var(--white);
+  border: dashed 1px var(--main-color);
+  height: 58px;
+  width: 235px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#reservation .book form .dropdown .items-holder .dropdown-item:hover {
+  background-color: var(--main-color);
+  opacity: 0.88;
+}
+#reservation input[type="date"] {
+    color:var(--gray);
+    background: url(/public/Images/calendar.png) no-repeat !important;
+    background-size: 28px !important;
+    background-position: 90% !important;
+}
+#reservation input[type="time"] {
+  color:var(--gray);
+    background: url(/public/Images/clock.png) no-repeat !important; 
+    background-size: 28px !important;
+    background-position: 90% !important;
+}
+#reservation input[type="date"]::-webkit-calendar-picker-indicator,#reservation input[type="time"]::-webkit-calendar-picker-indicator{
+    opacity: 0;
+    padding-right: 28px;
+}  
+#reservation .book form textarea {
+  margin-top: 45px !important;
+  background: transparent;
+  outline: none;
+  resize: none;
+  width: 892px;
+  border: dashed 1px var(--main-color); 
+  font-family: 'Arapey', serif;
+  height: 165px;
+  font-size: 18px;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+.custom-btn {
+  margin-bottom: 20px;
+  width: 100%;
+  color:var(--white);
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: 'Arimo', sans-serif;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+#reservation .timing .open-time h1 {
+  color:var(--main-color);
+  font-family: 'Alex Brush', cursive;
+  font-size: 50px;
+  font-weight: lighter;
+  margin-top: 8px;
+}
+#reservation .timing .open-time h2 {
+  font-size: 30px;
+  margin-top: 15px;
+  font-weight: lighter;
+}
+#reservation .timing .open-time div {
+  margin-top: 35px;
+}
+#reservation .timing .open-time div h4 {
+  font-size: 22px;
+  color:var(--main-color);
+  font-weight: lighter;
+  margin-bottom: 25px;
+}
+#reservation .timing .open-time div p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.menu-container-tabs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  word-break: break-all;
+}
+.menu-content-tabs {
+  width: 100%;
+}
+.menu-bloc-tabs {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabs { 
+  border: none;
+  font-family: 'KG Drops of Jupiter', sans-serif; 
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+.active-tabs {
+  color:var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+.OurMenu {
+  width: 100% !important;
+  font-family: 'Arimo', sans-serif;
+  text-align: left !important;
+  display: flex;
+}
+.OurMenu h1 {
+  text-align: left !important;
+  color:var(--secondary-color) !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+.OurMenu .OurMenuItems {
+  width: 100% !important;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
+}
+.OurMenu .OurMenuFood {
+  width: 438px !important;
+  display: flex;
+}
+.OurMenu .OurMenuFood .FoodItem {
+  margin-left: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.OurMenu .OurMenuFood .FoodItem div {
+  display: flex;
+  justify-content: space-between;
+}
+.OurMenu .OurMenuFood h2 {
+  font-size: 23px;
+  font-weight: 500;
+  color:var(--main-color);
+}
+.OurMenu .OurMenuFood p {
+  margin-top: 5px !important;
+  text-align: left !important;
+  width: 100% !important;
+  color:#777777;
+  font-weight: lighter !important;
+  line-height: 1.3;
+}
+.checkbox .check {
+  opacity: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  height: 29px;
+  width: 29px;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+  10px 10px 15px rgba(0,0,70,0.12);
+  border-radius: 50%;
+  border: 2px solid #adb5bd;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+.checkbox {
+  display: flex;
+  justify-content: center;
+}
+.checkbox .check::after {
+  transition: .5s;
+  font-family: monospace;
+  content: '';
+  color: #7a7a7a !important;
+  font-size: 20px;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #adb5bd;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+.checkbox .check:checked {
+  border: 2px solid var(--main-color);
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+  10px 10px 15px rgba(70,70,70,0.12),
+  inset -10px -10px 15px rgba(255,255,255,0.5),
+  inset 10px 10px 15px rgba(70,70,70,0.12);
+  transition: .5s;
+}
+.checkbox .check:checked::after {
+  transition: .5s;
+  border: solid var(--main-color);
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+.next ,.previous ,.skip{
+  margin-top: 45px;
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 3px;
+  height: 2.8em;
+  width: 100%;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+} 
+.next::before,.previous::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 100%;
+  background: rgb(208, 161, 102);
+  background: linear-gradient(90deg, rgba(208, 161, 102,1) 20%, rgb(224, 184, 135) 100%);
+  transition: 0.2s;
+}
+.next .label,.previous .label {
+  position: relative;
+}
+.next .icon,.previous .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  height: 2.1em;
+  width: 1.9em;
+  position: absolute;
+  top: 3em;
+  right:370px;
+  opacity: 0;
+  transition: 0.4s;
+}
+.next:hover::before,.previous:hover::before {
+  height: 100%;
+}
+.next:hover .icon,.previous:hover .icon {
+  top: 0;
+  opacity: 1;
+}
+.previous ,.skip,.submit{
+  width: 30%;
+}
+.submit,.previous,.skip {
+  text-transform:capitalize;
+  font-family: 'Arimo', sans-serif !important;
+  letter-spacing: 0;
+}
+.previous .icon  {
+  left: 10px;
+}
+.submit .icon {
+  right: 0;
+}
+.previous,.skip {
+  margin-right: 45px !important;
+}
+
+

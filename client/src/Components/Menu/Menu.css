@@ -1,0 +1,102 @@
+#Hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../../../public/Images/Menu.jpg');
+}
+#DiscoverMenu .MenuCover{
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+#DiscoverMenu .Breakfast {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../../../public/Images/Breakfast.jpg');
+}
+#DiscoverMenu .Lunch {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../../../public/Images/Lunch.jpg');
+}
+#DiscoverMenu .Dinner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../../../public/Images/Dinner.jpg');
+}
+#DiscoverMenu .Dessert {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../../../public/Images/Dessert.jpg');
+}
+#DiscoverMenu .Drinks {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../../../public/Images/Drinks.jpg');
+}
+#DiscoverMenu .MenuCover small {
+    font-family: 'KG Drops of Jupiter', sans-serif;
+    font-size: 25px;
+}
+#DiscoverMenu .MenuCover h1 {
+    font-family: 'Arimo', sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+#DiscoverMenu .MenuCover img {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+}
+#DiscoverMenu .MenuCover div{
+    margin: 0 auto;
+    bottom: 0;
+}
+#DiscoverMenu-Starter .header{
+    margin-top: 50px;
+    text-align: center;
+}
+#DiscoverMenu-Starter .header img {
+    width: 60px;
+    height: 60px;
+}
+#DiscoverMenu-Starter .header h1 {   
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#DiscoverMenu-Starter .header span {
+    font-family: 'KG Drops of Jupiter', sans-serif;
+    color:var(--main-color);
+    font-size: 25px;
+
+}
+#DiscoverMenu .MenuItems ,#DiscoverMenu-Starter .MenuItems{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 85px;
+    row-gap: 40px;
+    padding: 124px 100px 124px 100px;
+}
+#DiscoverMenu .MenuItems .div ,#DiscoverMenu-Starter .MenuItems .div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#DiscoverMenu .MenuItems h1 , #DiscoverMenu-Starter .MenuItems h1{
+    font-size: 22px;
+    margin-right: 100px;
+
+}
+#DiscoverMenu .MenuItems h2 ,#DiscoverMenu-Starter .MenuItems h2{
+    color:var(--main-color);
+    font-weight: 500;
+}
+#DiscoverMenu .MenuItems p, #DiscoverMenu-Starter .MenuItems p{
+    font-size: 18px;
+    color:#909090;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+#DiscoverMenu .MenuFood , #DiscoverMenu-Starter .MenuFood{
+    border-bottom: 2px dashed #E0E0E0;
+}
